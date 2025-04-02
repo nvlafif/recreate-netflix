@@ -1,0 +1,707 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.header{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url("IMAGE/bgheader.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo{
+    color: rgb(230, 3, 3);
+    font-family: "Bebas Neue", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 60px;
+    margin-left: 200px;
+    margin-right: 700px;
+    letter-spacing: 2px;
+}
+
+
+.SignIn{
+    color: white;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    font-size: 14px;
+    width: 80px;
+    height: 35px;
+    background-color: rgb(185, 5, 5);
+    border: 0px,solid;
+    border-color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+} 
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.9);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#language{
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    color: white;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 200px;
+    height: 35px;
+    margin-right: 10px;
+    font-size: 14px;
+    border: 1px, solid;
+    border-color: grey;
+    border-radius: 8px;
+}
+
+#language option {
+    background-color: black; /* Warna background list option */
+    color: white; /* Warna teks dalam option */
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: full-width;
+    height: 750px;
+    flex-direction: column;
+}
+
+.tagline{
+    font-size: 50px;
+    color: white;
+    font-family: "Montserrat", serif;
+    font-weight: 900;
+    text-align: center;
+}
+
+.tagline2{
+    font-size: 20px;
+    color: white;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tagline3{
+    font-size: 16px;
+    color: white;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.divaction{
+    margin-top: 20px;
+    width: full-width;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+
+}
+
+.email{
+    width: 350px;
+    height: 60px;
+    background-color: rgb(0, 0, 0, 0.7);
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px, solid;
+    border-color: gray;
+    position: relative;
+}
+
+.buttonstart{
+    color: white;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    font-size: 25px;
+    width: 250px;
+    height: 60px;
+    background-color: rgb(185, 5, 5);
+    border: 0px,solid;
+    border-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+input::placeholder {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+    color: gray;
+}
+
+input:focus::placeholder,
+input:not(:placeholder-shown)::placeholder {
+    transform: translateY(-150%);
+    opacity: 0;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    background-color: black ;
+    padding: 120px 120px 0px 120px;
+    /* clip-path: ellipse(120% 100% at 50% 100%); */
+    position: relative;
+    background-color: black;
+    
+}
+
+.trending{
+    width: initial;
+    color: white;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.film-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap:20px;
+}
+
+.filmContainer{
+    width: full-width;
+}
+
+.film{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between; 
+    gap: 50px; 
+    overflow-x: hidden; 
+    padding: 20px;
+    scroll-behavior: smooth;
+}
+
+.film::-webkit-scrollbar {
+    display: none;
+}
+
+.film img {
+    width: 180px; 
+    height: 270px;
+    object-fit: cover; 
+    border-radius: 15px; 
+    cursor: pointer;
+    flex-shrink: 0;
+    border: 0.1px solid rgb(255, 255, 255, 0.2);
+   
+     
+}
+
+.button-film-prev,
+.button-film-next{
+    width: 60px;
+    height: 120px;
+    font-size: 26px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: rgb(207, 206, 206);
+    background-color: rgba(121, 120, 120, 0.4);
+    border: 0px solid white;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, 
+    transform 0.6s ease-out, 
+    visibility 0s linear 0.6s;
+
+}
+
+/* Tombol kiri mulai dari kiri */
+.button-film-prev {
+    left: 0;
+    transform: translateX(-100%);
+}
+
+/* Tombol kanan mulai dari kanan */
+.button-film-next {
+    right: 0;
+    transform: translateX(100%);
+}
+
+.button-film-prev.show,
+.button-film-next.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0); /* Masuk ke posisi normal */
+    transition: 
+        opacity 0.6s ease-out, 
+        transform 0.6s ease-out, 
+        visibility 0s;
+}
+
+.film-item {
+    position: relative;
+    width: 210px;
+    height: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.film-item:hover {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.6); 
+}
+
+.ranking {
+    position: absolute;
+    top: 140px;
+    left: -25px;
+    color: rgb(0, 0, 0);
+    font-size: 90px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    font-family: "Arial", sans-serif;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+#morereason{
+    margin-top: 50px;
+}
+
+.reason-to-join{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: full-width;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+
+.reason{
+    display: flex;
+    width: 480px;
+    height: 250px;
+    background: linear-gradient(135deg, rgb(6, 15, 66), rgb(57, 6, 61));
+    font-family: "Montserrat", serif;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 14px;
+    border-radius:20px ;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.text-reason{
+    width: 100%;
+    height: 150px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-reason{
+    font-family: "Montserrat", serif;
+    font-weight: 600;
+    font-size: 22px;
+    
+}
+
+.content-reason{
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(255, 255, 255,0.7);
+    
+}
+
+.icon-reason{
+    width: 60px;
+    height: auto;
+    margin-left: auto;
+    
+}
+
+#frequently{
+    margin-top: 70px;
+}
+
+#block-asked{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.asked{
+    display: flex;
+    flex-direction: row ;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(124, 123, 123, 0.3);
+    padding-left: 20px;
+    padding-right: 20px;
+    align-content: center;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.asked:hover {
+    filter: brightness(1.5); 
+    transition: 0.3s ease-in-out;
+}
+
+.asked-title{
+    font-family: "Montserrat",serif;
+    font-weight: 500;
+    color: white;
+    font-size: 22px;   
+    align-content: center;
+}
+
+.asked-img{
+    width: auto;
+    height: 40px;
+    margin-left: auto;
+    align-self: center;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center center;
+    transform: rotate(45deg);
+    object-fit: cover;
+}
+
+.asked-img.rotate {
+    transform: rotate(0deg);
+}
+
+.asked-content{
+    width: 100%;
+    background-color: rgba(124, 123, 123, 0.3);
+    padding-left: 20px;
+    align-content: center;
+    margin-top: 2px;
+    padding: 20px;
+    overflow: hidden;
+
+    height: 0;
+    display: none;
+    padding: 0px;
+    transition: height 1.5s ease-in-out;
+}
+
+
+.asked-content.active {
+    height: fit-content; 
+    display: block;
+    padding: 30px;
+}
+
+.get-started-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.divaction-bottom{
+    margin-top: 20px;
+    width: full-width;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+
+}
+
+.email-bottom{
+    width: 600px;
+    height: 60px;
+    background-color: rgb(0, 0, 0, 0.7);
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    color: white;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px, solid;
+    border-color: gray;
+    position: relative;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    padding: 120px 120px 0px 120px;
+}
+
+.footer-1{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    align-content: center;
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgb(255, 255, 255,0.5);
+}
+
+.footer-2{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    height: 400px;
+    background-color: rgb(0, 0, 0);
+}
+
+.footer-2-1{
+    flex: 1;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+.footer-2-2{
+    flex: 1;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+.footer-2-3{
+    flex: 1;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+.footer-2-4{
+    flex: 1;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+.list-service{
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    font-size: 14px;
+    list-style: none;
+    line-height: 2.5;
+    transform: translateY(30px);
+}
+
+.list-service li a{
+    color: rgb(255, 255, 255, 0.5);
+    
+}
+
+.footer-3{
+    width: 100%;
+    height: 400px;
+    background-color: rgb(0, 0, 0);
+    transform: translateY(80px);
+}
+
+.wkwk{
+    background-color: rgb(0, 0, 0);
+    transform: translateY(20px);
+    color: rgb(255, 255, 255, 0.5);
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Efek gelap transparan */
+    backdrop-filter: blur(8px); /* Efek blur */
+    opacity: 0; /* Awalnya transparan */
+    transition: opacity 0.3s ease-in-out;
+    z-index: 999; /* Di bawah popup */
+    pointer-events: none; /* Tidak bisa diklik sebelum muncul */
+}
+
+/* Saat popup muncul, overlay juga muncul */
+.overlay.show {
+    opacity: 1;
+    pointer-events: auto; /* Bisa diklik */
+}
+
+
+.take-action-filmContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9); /* Awalnya lebih kecil */
+    width: 700px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0px 50px 50px;
+    border: 0.1px, solid;
+    border-color: rgb(255, 255, 255, 0.5);
+    border-radius: 5%;
+    gap: 15px;
+    justify-content: end;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0) 100%), 
+                url("IMAGE/bgheader.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    opacity: 0; /* Awalnya transparan */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 1000;
+    pointer-events: none; /* Supaya tidak bisa diklik sebelum muncul */
+}
+
+
+/* Saat muncul (ditambahkan class "show" dari JS) */
+.take-action-filmContainer.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); /* Membesar dengan smooth */
+    pointer-events: auto; /* Bisa diklik setelah muncul */
+}
+
+.close_2{
+    position: relative;
+    /* right: -10px; */
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: end;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+
+.close_2 img{
+    width: auto;
+    height: 35px;
+    cursor: pointer;
+    position: absolute;
+    transition: transform 0.1s ease, opacity 0.1s ease;
+}
+
+.close_2 img:active {
+    transform: scale(0.9); /* Animasi pop kecil */
+    opacity: 0.7; /* Sedikit memudar */
+}
+
+
+#title-film{
+    width: 100%;
+    height: fit-content;
+    background: none;
+    font-size: 30px;
+    font-family: "Montserrat",serif;
+    font-weight: 500;
+    color: white;
+    align-items: end;
+}
+
+#categories-film{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    background : none;
+    gap: 10px;
+    justify-content: start;
+    align-items: end;
+}
+
+.point{
+    height: fit-content;
+    width: fit-content;
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    display: inline-block;
+}
+
+.point:not(:last-child)::after {
+    content: "●"; /* Garis pembatas */
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+}
+
+#sinopsis-film{
+    height: 30px;
+    width: 100%;
+    background:none;
+    align-content: start;
+    padding-right: 50px;
+}
+
+#sinopsis-film p{
+    font-family: "Montserrat", serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+}
+
+.take-action-filmContainer .divaction{
+    transform: translateY(5px);
+    padding-right: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

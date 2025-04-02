@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar HTML</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <span class="logo">
+                NAUFAL
+            </span>
+            <span>
+                <select id="language">
+                    <option value="apple">Bahasa Indonesia</option>
+                    <option value="banana">English</option>
+                </select>
+            </span>
+            <span>
+                <button  class="SignIn">Sign In</button>
+            </span>
+            <div class= "container" >
+                <div class="tagline">
+                    Unlimited movies,<br> TV shows, and more
+                </div>
+                <div class="tagline2">
+                    Starts at IDR 54,000. Cancel anytime.
+                </div>
+                <div class="tagline3">
+                    Ready to watch? Enter your email to create or restart your membership.
+                </div>
+                <div class="divaction">
+                    <span>
+                        <input class="email" type="email" placeholder="Email Address" required>
+                    </span>
+                    <span>
+                        <button class="buttonstart">Get Started</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="section">
+        <div class ="trending">
+            Trending Now
+        </div>
+        <div class="film-wrapper">
+            <button id="prev" class="button-film-prev" onclick="scrollKiri()"><</button>
+            <span class="film" id="filmContainer">
+                <div class="film-item">
+                    <span class="ranking">1</span>
+                    <img src="IMAGE/1-interstellar.jpg" alt="Interstellar">
+                </div>
+                <div class="film-item">
+                    <span class="ranking">2</span>
+                    <img src="IMAGE/2-oppenheimer.jpg" alt="Oppenheimer">
+                </div>
+                <div class="film-item">
+                    <span class="ranking">3</span>
+                    <img src="IMAGE/3-wolvwerine.jpg" alt="Wolverine">
+                </div>
+                <div class="film-item">
+                    <span class="ranking">4</span>
+                    <img src="IMAGE/4-Venom 3 Poster.jpg" alt="4-Venom">
+                </div>
+                <div class="film-item">
+                    <span class="ranking">5</span>
+                    <img src="IMAGE/5-Dark.jpg" alt="5-Dark">
+                </div>
+                <div class="film-item">
+                    <span class="ranking">6</span>
+                    <img src="IMAGE/6-Monkey Man Poster.jpg" alt="6-Monkey">
+                </div>
+                <div class="film-item">
+                    <span class="ranking">7</span>
+                    <img src="IMAGE/7-Squid Game.jpg" alt="7-Squid">
+                </div>
+                <div class="film-item">
+                    <span class="ranking">8</span>
+                    <img src="IMAGE/8-fall.jpg" alt="8-fall">
+                </div>
+                <div class="film-item">
+                    <span class="ranking">9</span>
+                    <img src="IMAGE/9-The Maze Runner.jpg" alt="9-The">
+                </div>
+                <div class="film-item">
+                    <span class="ranking">10</span>
+                    <img src="IMAGE/10-One Piece Live Action series Poster.jpg" alt="10-One">
+                </div>
+            </span>
+            <button id = "next" class="button-film-next" onclick="scrollRight()">></button>
+        </div>
+
+        <div class="overlay"></div>
+
+        <!-- TAKE ACTION FILM CONTAINER -->
+        <div class="take-action-filmContainer" class="overlay">
+            <div class="close_2"><img src="IMAGE/close.png" alt="close"></div> 
+            <div id="title-film">Title</div>
+            <div id="categories-film">
+                <div class="point">2024</div>
+                <div class="point">13+</div>
+                <div class="point">Movies</div>
+                <div class="point">Commedies</div>
+                <div class="point">Dramas</div>
+            </div>
+            <div id="sinopsis-film"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum mattis tristique neque in pretium. Maecenas id nulla non diam consectetur sodales nec eu neque.</p></div>
+            <div class="divaction">
+                <span>
+                    <input class="email" type="email" placeholder="Email Address" required>
+                </span>
+                <span>
+                    <button class="buttonstart">Get Started</button>
+                </span>
+            </div>
+        </div>
+
+
+        <div id="morereason" class="trending">
+            More Reason to Join
+        </div>
+        <div class="reason-to-join">
+            <div class="reason">
+                <div class="text-reason">
+                    <div class="title-reason">Enjoy on your TV</div>
+                    <div class="content-reason">Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</div>
+                </div>
+                <img class="icon-reason" src="IMAGE/tv.svg" alt="tv">
+            </div>
+            <div class="reason">
+                <div class="text-reason">
+                    <div class="title-reason">Download your shows to watch offline</div>
+                    <div class="content-reason">Save your favorites easily and always have something to watch.</div>
+                </div>
+                <img class="icon-reason" src="IMAGE/download.svg" alt="download">
+            </div>
+            <div class="reason">
+                <div class="text-reason">
+                    <div class="title-reason">Watch everywhere</div>
+                    <div class="content-reason">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</div>
+                </div>
+                <img class="icon-reason" src="IMAGE/travel_explore.svg" alt="travel_explore">
+            </div>
+            <div class="reason">
+                <div class="text-reason">
+                    <div class="title-reason">Create profiles for kids</div>
+                    <div class="content-reason">Send kids on adventures with their favorite characters in a space made just for them — free with your membership.</div>
+                </div>
+                <img class="icon-reason" src="IMAGE/family_restroom.svg" alt="family_restroom">
+            </div>
+        </div>
+
+        <!-- FREQUENTLY ASKED QUESTIONS -->
+        <div id="frequently" class="trending">Frequently Asked Questions</div>
+        <div id="block-asked">
+            <div class="block-asked-asked">
+                <div class="asked" id = "asked-1" onclick="toggleAsked(1)">
+                    <div class="asked-title">What is Netflix?</div>
+                    <img class="asked-img" src="IMAGE/close.png" alt="close">
+                </div>
+                <div class="asked-content" id="asked-content-1">
+                    <p class="asked-title">Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices. <br><br>
+                    You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!</p>
+                </div>
+            </div>
+            
+            <div class="block-asked-asked">
+                <div class="asked" id = "asked-2" onclick="toggleAsked(2)">
+                    <div class="asked-title">How much does Netflix cost?</div>
+                    <img class="asked-img" src="IMAGE/close.png" alt="close">
+                </div>
+                <div class="asked-content" id="asked-content-2">
+                    <p class="asked-title">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from IDR 54,000 to IDR 186,000 a month. No extra costs, no contracts.</p>
+                </div>
+            </div>
+
+            <div class="block-asked-asked">
+                <div class="asked" id = "asked-3" onclick="toggleAsked(3)">
+                    <div class="asked-title">Where can I watch?</div>
+                    <img class="asked-img" src="IMAGE/close.png" alt="close">
+                </div>
+                <div class="asked-content" id="asked-content-3">
+                    <p class="asked-title">Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.<br><br>
+        
+                        You can also download your favorite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+                </div>
+            </div>
+
+            <div class="block-asked-asked">
+                <div class="asked" id = "asked-4" onclick="toggleAsked(4)">
+                    <div class="asked-title">How do I cancel?</div>
+                    <img class="asked-img" src="IMAGE/close.png" alt="close">
+                </div>
+                <div class="asked-content" id="asked-content-4">
+                    <p class="asked-title">Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+                </div>
+            </div>
+
+            <div class="block-asked-asked">
+                <div class="asked" id = "asked-5" onclick="toggleAsked(5)">
+                    <div class="asked-title">What can I watch On Netflix?</div>
+                    <img class="asked-img" src="IMAGE/close.png" alt="close">
+                </div>
+                <div class="asked-content" id="asked-content-5">
+                    <p class="asked-title">Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+                </div>
+            </div>
+
+            <div class="block-asked-asked">
+                <div class="asked" id = "asked-6" onclick="toggleAsked(6)">
+                    <div class="asked-title">Is Netflix good for kids?</div>
+                    <img class="asked-img" src="IMAGE/close.png" alt="close">
+                </div>
+                <div class="asked-content" id="asked-content-6">
+                    <p class="asked-title">The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space. <br><br>
+        
+                        Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="get-started-bottom">
+            <div class="tagline3">
+                Ready to watch? Enter your email to create or restart your membership.
+            </div>
+            <div class="divaction-bottom">
+                <span>
+                    <input class="email-bottom" type="email" placeholder="Email Address" required>
+                </span>
+                <span>
+                    <button class="buttonstart">Get Started</button>
+                </span>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-1">
+            Questions? Call 007-803-321-8275
+        </div>
+        <div class="footer-2">
+            <div class="footer-2-1">
+                <ul class="list-service">
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Investor Relations</a></li>
+                    <li><a href="">Investor Relations</a></li>
+                    <li><a href="">Corporate Information</a></li>
+                    <li><a href="">Only on Netflix</a></li>
+                </ul>
+            </div>
+            <div class="footer-2-2">
+                <ul class="list-service">
+                    <li><a href="">Help Center</a></li>
+                    <li><a href="">Jobs</a></li>
+                    <li><a href="">Terms of Use</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-2-3">
+                <ul class="list-service">
+                    <li><a href="">Account</a></li>
+                    <li><a href="">Redeem Gift Cards</a></li>
+                    <li><a href="">Privacy</a></li>
+                    <li><a href="">Speed Test</a></li>
+                </ul>
+            </div>
+            <div class="footer-2-4">
+                <ul class="list-service">
+                    <li><a href="">Media Center</a></li>
+                    <li><a href="">Buy Gift Cards</a></li>
+                    <li><a href="">Cookie Preferences</a></li>
+                    <li><a href="">Legal Notices</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-3">
+            <div>
+                <select id="language">
+                    <option value="apple">Bahasa Indonesia</option>
+                    <option value="banana">English</option>
+                </select>
+            </div>
+            <div class="wkwk">
+                <p>Netflix Indonesia</p>
+            </div>
+        </div>
+        
+    </footer>
+
+</body>
+</html>
