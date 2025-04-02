@@ -1,3 +1,7 @@
+document.documentElement.style.setProperty('--scrollbar-thumb', '#bebebe'); // change thumb's color
+document.documentElement.style.setProperty('--scrollbar-track', '#333'); // change track's color
+
+
 const filmContainer = document.querySelector('.film');
 const btnPrev = document.getElementById('prev');
 const btnNext = document.getElementById('next');
